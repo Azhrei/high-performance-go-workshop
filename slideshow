@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export GOPATH=$(pwd -P)
+PATH="$PATH:$GOPATH/bin"
+present
