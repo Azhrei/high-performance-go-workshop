@@ -8,7 +8,6 @@ func BenchmarkFib(b *testing.B) {
 		Fib(20) // run the Fib function b.N times
 	}
 }
-
 // ENDBENCH OMIT
 
 // STARTFIB OMIT
@@ -19,7 +18,6 @@ func Fib(n int) int {
 	}
 	return Fib(n-1) + Fib(n-2)
 }
-
 // ENDFIB OMIT
 
 func Fib2(n int) int {
