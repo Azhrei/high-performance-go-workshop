@@ -285,7 +285,7 @@ The same optimisations that make real code fast, by removing unnecessary computa
 
 This is only going to get more common as the Go compiler improves.
 
-DEMO: show how to fix popcnt
+: DEMO: show how to fix popcnt
 
 * Benchmark mistakes
 
@@ -297,9 +297,9 @@ Here are two incorrect benchmarks, can you explain what is wrong with them?
 
 * Discussion
 
-Are there any questions?
+Questions?
 
-Perhaps it is time for a break.
+Time for a break?
 
 * Performance measurement and profiling
 
@@ -322,7 +322,7 @@ It consists of two parts:
 - `runtime/pprof` package built into every Go program
 - `go`tool`pprof` for investigating profiles.
 
-pprof supports several types of profiling, we'll discuss three of these today: 
+pprof supports several types of profiling; we'll discuss three of these: 
 
 - CPU profiling.
 - Memory profiling.
@@ -346,9 +346,9 @@ Stack allocations are assumed to be free and are _not_tracked_ in the memory pro
 
 Memory profiling, like CPU profiling is sample based, by default memory profiling samples 1 in every 1000 allocations. This rate can be changed.
 
-Because of memory profiling is sample based and because it tracks _allocations_ not _use_, using memory profiling to determine your application's overall memory usage is difficult.
+Because memory profiling is sample based and because it tracks _allocations_ not _use_, using memory profiling to determine your application's overall memory usage is difficult.
 
-_Personal_Opinion:_ I do not find memory profiling useful for finding memory leaks. There are better ways to determine how much memory your application is using. We will discuss these later in the presentation.
+_Personal_Opinion_from_Dave_: I do not find memory profiling useful for finding memory leaks. There are better ways to determine how much memory your application is using. We will discuss these later in the presentation.
 
 * Block profiling
 
