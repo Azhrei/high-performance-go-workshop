@@ -15,8 +15,7 @@ func F() {
 	}
 }
 
-// END OMIT
-
 func main() {
 	F()
 }
+// END OMIT

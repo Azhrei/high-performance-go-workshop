@@ -1,6 +1,6 @@
-package main
+package main // OMIT
 
-import "fmt"
+import "fmt" // OMIT
 
 // START OMIT
 
@@ -22,5 +22,5 @@ func Sum() int {
 // END OMIT
 
 func main() {
-	fmt.Println(Sum())
+	fmt.Println(Sum())  // This is line 25
 }
