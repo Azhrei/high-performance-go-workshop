@@ -295,11 +295,12 @@ Here are two incorrect benchmarks, can you explain what is wrong with them?
 
 .code examples/benchfib/wrong_test.go /START OMIT/,/END OMIT/
 
+: The first benchmark optimizes away the function call (same as popcnt()
+: The second benchmark uses b.N as the outer loop, then passes n to Fib()
+
 * Discussion
 
 Questions?
-
-Time for a break?
 
 * Performance measurement and profiling
 
