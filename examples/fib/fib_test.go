@@ -3,6 +3,8 @@ package fib
 // STARTBENCH OMIT
 import "testing"
 
+// BenchmarkFib runs the Fib(20) function a number of times such that
+// the total execution takes at least one second (by default).
 func BenchmarkFib(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		Fib(20) // run the Fib function b.N times
@@ -11,7 +13,8 @@ func BenchmarkFib(b *testing.B) {
 // ENDBENCH OMIT
 
 // STARTFIB OMIT
-// Fib computes the n'th number in the Fibonacci series.
+// Fib computes the n'th number in the Fibonacci series
+// using recursion.
 func Fib(n int) int {
 	if n < 2 {
 		return n
@@ -20,6 +23,8 @@ func Fib(n int) int {
 }
 // ENDFIB OMIT
 
+// Fib2 computes the n'th number in the Fibonacci series
+// using iteration.
 func Fib2(n int) int {
 	a, b := 0, 1
 	for i := 0; i < n; i++ {
@@ -28,6 +33,8 @@ func Fib2(n int) int {
 	return a
 }
 
+// TestFib tests the first nine elements of the Fibonacci series
+// using the Fib() function.
 func TestFib(t *testing.T) {
 	fibs := []int{0, 1, 1, 2, 3, 5, 8, 13, 21}
 	for n, want := range fibs {
@@ -38,6 +45,8 @@ func TestFib(t *testing.T) {
 	}
 }
 
+// TestFib2 tests the first nine elements of the Fibonacci series
+// using the Fib2() function.
 func TestFib2(t *testing.T) {
 	fibs := []int{0, 1, 1, 2, 3, 5, 8, 13, 21}
 	for n, want := range fibs {
@@ -48,6 +57,7 @@ func TestFib2(t *testing.T) {
 	}
 }
 
+// TestFibFib tests return values from Fib() against values from Fib2()
 func TestFibFib(t *testing.T) {
 	for n := 0; n < 30; n++ {
 		want := Fib(n)
@@ -58,6 +68,8 @@ func TestFibFib(t *testing.T) {
 	}
 }
 
+// Note that the leading underscore means this function will never be
+// executed by the benchmark tests.
 func _BenchmarkFib2(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		Fib2(20)

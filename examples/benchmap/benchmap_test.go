@@ -28,9 +28,11 @@ var capitals = map[string]string{
 	"Luxembourg":             "Luxembourg",
 }
 
+// sink to ensure the compiler does not optimise away dead assignments.
 var sink string
 
 func BenchmarkMapLookup(b *testing.B) {
+	b.Log("Using the special map[string(bytes)] construct...")
 	var key = []byte{'F', 'r', 'a', 'n', 'c', 'e'}
 	var r string
 	for n := 0; n < b.N; n++ {
@@ -40,6 +42,7 @@ func BenchmarkMapLookup(b *testing.B) {
 }
 
 func BenchmarkMapLookup2(b *testing.B) {
+	b.Log("Using the normal bytes-to-string conversion...")
 	var key = []byte{'F', 'r', 'a', 'n', 'c', 'e'}
 	var r string
 	for n := 0; n < b.N; n++ {

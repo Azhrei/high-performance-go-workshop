@@ -10,5 +10,4 @@ func processRequest(work *Work) {
 	// process request
 	<-semaphore // release semaphore
 }
-
 // END OMIT

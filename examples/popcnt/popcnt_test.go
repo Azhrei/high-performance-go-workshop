@@ -20,5 +20,4 @@ func BenchmarkPopcnt(b *testing.B) {
 		popcnt(uint64(i))
 	}
 }
-
 // END OMIT

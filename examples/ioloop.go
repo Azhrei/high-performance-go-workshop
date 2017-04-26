@@ -12,7 +12,7 @@ type Conn struct {
 }
 
 func (c *Conn) Loop() {
-	defer r.Close()
+	defer c.r.Close()
 	var buf [512]byte
 	for {
 		b := buf[:] // create slice of buf
@@ -27,5 +27,4 @@ func (c *Conn) Loop() {
 		}
 	}
 }
-
 // END OMIT

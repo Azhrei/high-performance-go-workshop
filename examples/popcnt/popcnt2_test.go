@@ -22,5 +22,4 @@ func BenchmarkPopcnt(b *testing.B) {
 		// optimised away
 	}
 }
-
 // END OMIT

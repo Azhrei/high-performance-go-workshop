@@ -23,6 +23,8 @@ func setup(b *testing.B) (struct{ ID string }, net.Listener) {
 	return request, client
 }
 
+// BenchmarkConcatenate concatenates multiple strings together using the
+// '+' operator.
 func BenchmarkConcatenate(b *testing.B) {
 	request, client := setup(b)
 	defer client.Close()
@@ -41,6 +43,8 @@ func BenchmarkConcatenate(b *testing.B) {
 	Result = r
 }
 
+// BenchmarkFprintf prints three values into a bytes.Buffer, one with
+// '%s' and the other two with '%v'.
 func BenchmarkFprintf(b *testing.B) {
 	request, client := setup(b)
 	defer client.Close()
@@ -58,6 +62,8 @@ func BenchmarkFprintf(b *testing.B) {
 	Result = r
 }
 
+// BenchmarkSprintf prints three values into a string, one with
+// '%s' and the other two with '%v'.
 func BenchmarkSprintf(b *testing.B) {
 	request, client := setup(b)
 	defer client.Close()
@@ -73,6 +79,8 @@ func BenchmarkSprintf(b *testing.B) {
 	Result = r
 }
 
+// BenchmarkStrconv converts strings to []byte, then converts the []byte
+// back into a string.
 func BenchmarkStrconv(b *testing.B) {
 	request, client := setup(b)
 	defer client.Close()

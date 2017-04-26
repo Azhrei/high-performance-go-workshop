@@ -9,7 +9,6 @@ func F() {
 	}
 	panic(b)
 }
-
 // END OMIT
 
 func main() {
