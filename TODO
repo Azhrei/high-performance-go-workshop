@@ -1,5 +1,6 @@
-Shrink the concurrency stuff at the beginning.
-Advertise as "Similar to Tutorial but takes things deeper."
-Split High Performance off into a separate course that can be
-    registered for separately from the first part.
+Ways to modify the course:
+    Shrink the concurrency stuff at the beginning.
+    Split High Performance off into a separate course that can be
+        registered for separately from the first part.
 
+Example for HighPerf section?  https://play.golang.org/p/AmQW-OrPC1

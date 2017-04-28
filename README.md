@@ -21,7 +21,7 @@ This slide deck and supporting material is part of the _High Performence Go_ tra
 
 The slides will be available at [http://127.0.0.1:3999/high-performance-go-workshop.slide](http://127.0.0.1:3999/high-performance-go-workshop.slide#1)
 
-_Note_: The URL *must* contain `127.0.0.1:3999` and `localhost:3999` will not work!
+_Note_: The URL *must* contain `127.0.0.1:3999` because `localhost:3999` will not work!
 
 # License and Materials
 
